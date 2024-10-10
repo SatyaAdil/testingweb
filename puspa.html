@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profil Berliani Puspa Januar - Mahasiswa Keperawatan">
+    <title>Berliani Puspa Januar - Mahasiswa Keperawatan</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Satisfy&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fef6f9;
+            color: #555;
+        }
+        
+        header {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: white;
+            padding: 120px 0; /* Padding besar untuk menghindari tumpang tindih dengan gambar profil */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "✨";
+            font-size: 100px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        header::after {
+            content: "🌸";
+            font-size: 80px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            animation: float-reverse 4s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes float-reverse {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(20px); }
+            100% { transform: translateY(0); }
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-family: 'Satisfy', cursive;
+            margin-bottom: 10px;
+            animation: fadeInDown 2s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .btn-primary {
+            background-color: #fff;
+            color: #ff6f91;
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(255, 111, 145, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ff6f91;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 111, 145, 0.5);
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+        }
+        
+        .profile-image {
+            display: block;
+            margin: -70px auto 30px; /* Mengurangi margin negatif agar tidak terlalu tinggi */
+            border-radius: 50%;
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border: 8px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 10; /* Memastikan gambar tetap di depan elemen lain */
+            position: relative;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: white;
+            padding: 60px 0;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        section h2 {
+            color: #ff6f91;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Satisfy', cursive;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #666;
+            max-width: 750px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background-color: #fff4f7;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+        }
+
+        .skill h3 {
+            font-size: 1.6rem;
+            color: #ff6f91;
+            margin-bottom: 10px;
+        }
+
+        .skill p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .skill::before {
+            content: "💖";
+            font-size: 40px;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            opacity: 0.2;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .contact-info div {
+            background-color: #fff4f7;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 260px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .contact-info a {
+            color: #ff6f91;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .skills, .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Berliani Puspa Januar</h1>
+        <p>Mahasiswa Keperawatan | Calon Profesional Kesehatan 🌸</p>
+        <a href="#contact" class="btn-primary">Hubungi Saya</a>
+    </header>
+
+    <!-- Profile Image -->
+    <img src="WhatsApp Image 2024-10-10 at 20.46.40.jpeg" alt="Berliani Puspa Januar" class="profile-image">
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Halo! Saya Berliani Puspa Januar, seorang mahasiswa keperawatan yang bersemangat. Saya memiliki tekad untuk membantu orang lain dan belajar tentang praktik terbaik dalam dunia kesehatan. Saya percaya bahwa empati dan pengetahuan adalah kunci untuk sukses dalam memberikan perawatan pasien yang optimal. 🌟</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id
+    ="education">
+        <h2>Pendidikan</h2>
+        <p>Saat ini, saya menempuh pendidikan di program Keperawatan, dengan fokus pada perawatan pasien secara komprehensif. Saya mengembangkan pemahaman mendalam tentang sistem kesehatan dan cara bekerja sama dengan tim medis dalam lingkungan klinis. 🌱</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Keterampilan</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Perawatan Dasar</h3>
+                <p>Terampil dalam memberikan layanan perawatan dasar untuk pasien. 💉</p>
+            </div>
+            <div class="skill">
+                <h3>Komunikasi</h3>
+                <p>Mampu berkomunikasi efektif dengan pasien, keluarga, dan tim kesehatan. 🗣️</p>
+            </div>
+            <div class="skill">
+                <h3>Pertolongan Pertama</h3>
+                <p>Tersertifikasi dalam memberikan pertolongan pertama dan CPR. ⛑️</p>
+            </div>
+            <div class="skill">
+                <h3>Kolaborasi Tim</h3>
+                <p>Terampil bekerja dalam tim untuk merawat pasien secara holistik. 👩‍⚕️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Hubungi Saya</h2>
+        <div class="contact-info">
+            <div>
+                <h3>Email</h3>
+                <p><a href="mailto:berliani.puspa@example.com">berliani.puspa@example.com</a></p>
+            </div>
+            <div>
+                <h3>LinkedIn</h3>
+                <p><a href="https://linkedin.com/in/berliani-puspa" target="_blank">linkedin.com/in/berliani-puspa</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Berliani Puspa Januar. Hak Cipta Dilindungi. 💕</p>
+    </footer>
+
+</body>
+</html>
+
